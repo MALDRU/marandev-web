@@ -90,7 +90,7 @@ Columna 3 — AgendaChat:
   Términos de Servicio    → /agendachat/terminos.html
 
 Columna 4 — Contacto:
-  📧 hola@marandev.co
+  📧 ing.andres.latorre@gmail.com
   🌐 marandev.co
   Colombia 🇨🇴
 ```
@@ -273,7 +273,7 @@ Subtítulo: "Estamos aquí para ayudarte"
 
 ### Información de contacto
 ```
-📧 Email: hola@marandev.co
+📧 Email: ing.andres.latorre@gmail.com
 💬 WhatsApp: [número de contacto]
 🌐 Web: marandev.co
 📍 Colombia 🇨🇴
@@ -295,7 +295,7 @@ Campos:
 Botón: "Enviar mensaje"
 Nota: "Te respondemos en menos de 24 horas hábiles."
 
-El formulario usa mailto: hola@marandev.co (sin backend)
+El formulario usa mailto: ing.andres.latorre@gmail.com (sin backend)
 ```
 
 ---
@@ -374,7 +374,7 @@ directamente desde WhatsApp."
 Título: "Política de Privacidad — AgendaChat"
 Última actualización: Mayo 2025
 Empresa: Marandev
-Contacto: hola@marandev.co
+Contacto: ing.andres.latorre@gmail.com
 
 SECCIONES OBLIGATORIAS:
 
@@ -412,7 +412,7 @@ SECCIONES OBLIGATORIAS:
    - Solicitar corrección de datos incorrectos
    - Solicitar eliminación de tus datos
    - Retirar tu consentimiento en cualquier momento
-   Para ejercer estos derechos escribe a: hola@marandev.co
+   Para ejercer estos derechos escribe a: ing.andres.latorre@gmail.com
 
 6. Seguridad
    Implementamos medidas de seguridad técnicas y organizativas 
@@ -429,7 +429,7 @@ SECCIONES OBLIGATORIAS:
 
 9. Contacto
    Marandev
-   hola@marandev.co
+   ing.andres.latorre@gmail.com
    marandev.co
    Colombia
 ```
@@ -443,7 +443,7 @@ SECCIONES OBLIGATORIAS:
 Título: "Términos de Servicio — AgendaChat"
 Última actualización: Mayo 2025
 Empresa: Marandev
-Contacto: hola@marandev.co
+Contacto: ing.andres.latorre@gmail.com
 
 SECCIONES:
 
@@ -512,7 +512,7 @@ SECCIONES:
 
 12. Contacto
     Marandev
-    hola@marandev.co
+    ing.andres.latorre@gmail.com
     marandev.co
     Colombia
 ```
@@ -543,4 +543,4 @@ SECCIONES:
 ---
 
 *Sitio web Marandev.co · Mayo 2025*
-*Dominio: marandev.co · Email: hola@marandev.co*
+*Dominio: marandev.co · Email: ing.andres.latorre@gmail.com*
