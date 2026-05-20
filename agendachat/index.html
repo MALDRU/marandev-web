@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AgendaChat — Agendamiento de citas por WhatsApp</title>
-  <meta name="description" content="AgendaChat: tus clientes agendan citas por WhatsApp en segundos. Sincronización automática con Google Calendar. Prueba 30 días gratis.">
+  <meta name="description" content="AgendaChat: tus clientes agendan citas por WhatsApp en segundos. Registro automático, recordatorios y sincronización con Google Calendar. Prueba 15 días gratis.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&family=Syne:wght@700;800&display=swap" rel="stylesheet">
@@ -38,10 +38,10 @@
   <section class="hero">
     <div class="container">
       <div class="hero-badge fade-up">WhatsApp + Google Calendar</div>
-      <h1 class="fade-up d1">Agenda citas por WhatsApp,<br>sin complicaciones</h1>
-      <p class="hero-sub fade-up d2">Tu negocio disponible 24/7. Tus clientes agendan en segundos. Tú gestionas desde Google Calendar.</p>
+      <h1 class="fade-up d1">El asistente de citas que trabaja<br>mientras tú atiendes</h1>
+      <p class="hero-sub fade-up d2">Tus clientes reservan en segundos desde WhatsApp. Tú gestionas todo desde Google Calendar y tu panel web. Sin llamadas, sin olvidos, sin no-shows.</p>
       <div class="hero-actions fade-up d3">
-        <a href="../contacto.html" class="btn btn-primary btn-lg">Comenzar 30 días gratis</a>
+        <a href="../contacto.html" class="btn btn-primary btn-lg">Comenzar 15 días gratis</a>
         <a href="#como-funciona" class="btn btn-outline btn-lg">Ver cómo funciona</a>
       </div>
     </div>
@@ -65,15 +65,15 @@
         <div class="step fade-up d2">
           <div class="step-num">02</div>
           <div class="step-content">
-            <h4>El bot muestra los profesionales disponibles</h4>
-            <p>El cliente ve el listado de profesionales activos del negocio y elige con quién quiere su cita.</p>
+            <h4>Si es nuevo, se registra en el momento</h4>
+            <p>El bot recoge nombre e identificación una sola vez. En visitas futuras, el cliente va directo a agendar.</p>
           </div>
         </div>
         <div class="step fade-up d3">
           <div class="step-num">03</div>
           <div class="step-content">
-            <h4>El cliente elige profesional, tipo de cita y horario</h4>
-            <p>El bot guía todo el proceso: tipo de servicio, fecha y hora disponibles según el calendario real.</p>
+            <h4>Elige profesional, tipo de cita y horario</h4>
+            <p>El bot muestra solo los horarios disponibles en tiempo real, según la agenda del profesional y las citas ya agendadas.</p>
           </div>
         </div>
         <div class="step fade-up d1">
@@ -87,7 +87,7 @@
           <div class="step-num">05</div>
           <div class="step-content">
             <h4>La cita aparece en Google Calendar del profesional</h4>
-            <p>Automáticamente. Sin pasos extras, sin apps que aprender, sin correos manuales.</p>
+            <p>Automáticamente. 1 día antes, el cliente recibe un recordatorio por WhatsApp. Puede confirmar o cancelar directo desde el chat.</p>
           </div>
         </div>
       </div>
@@ -123,6 +123,18 @@
           <span>Nutricionistas</span>
         </div>
         <div class="para-quien-item">
+          <span class="icon">💪</span>
+          <span>Entrenadores personales</span>
+        </div>
+        <div class="para-quien-item">
+          <span class="icon">✂️</span>
+          <span>Peluquerías y estéticas</span>
+        </div>
+        <div class="para-quien-item">
+          <span class="icon">🔧</span>
+          <span>Mecánicas y talleres</span>
+        </div>
+        <div class="para-quien-item">
           <span class="icon">🔬</span>
           <span>Especialistas en general</span>
         </div>
@@ -136,25 +148,45 @@
 
       <div class="section-header fade-up">
         <h2 class="section-title">Planes y precios</h2>
-        <p class="section-sub">30 días de prueba gratis en todos los planes. Sin tarjeta de crédito.</p>
+        <p class="section-sub">15 días de prueba gratis en todos los planes. Sin tarjeta de crédito.</p>
       </div>
 
-      <div class="plans-grid fade-up d1">
+      <div class="plans-grid fade-up d1" style="justify-content:center">
+
+        <!-- Esencial -->
+        <div class="plan-card">
+          <p class="plan-name">Esencial</p>
+          <div class="plan-price">
+            <span class="amount">$49.900</span>
+            <span class="period">COP/mes</span>
+          </div>
+          <p class="plan-desc">1 profesional · 110 citas/mes</p>
+          <ul class="plan-features">
+            <li class="plan-feature"><span class="plan-check">✓</span> 15 días de prueba gratis</li>
+            <li class="plan-feature"><span class="plan-check">✓</span> Agendamiento 24/7 por WhatsApp</li>
+            <li class="plan-feature"><span class="plan-check">✓</span> Google Calendar sincronizado</li>
+            <li class="plan-feature"><span class="plan-check">✓</span> Recordatorios automáticos</li>
+            <li class="plan-feature"><span class="plan-check">✓</span> Panel web de gestión</li>
+            <li class="plan-feature"><span class="plan-check">✓</span> Configuración incluida</li>
+          </ul>
+          <a href="../contacto.html" class="btn btn-outline">Comenzar gratis</a>
+        </div>
 
         <!-- Starter -->
         <div class="plan-card">
           <p class="plan-name">Starter</p>
           <div class="plan-price">
-            <span class="amount">$49.900</span>
+            <span class="amount">$69.900</span>
             <span class="period">COP/mes</span>
           </div>
-          <p class="plan-desc">Hasta 2 profesionales</p>
+          <p class="plan-desc">3 profesionales · 350 citas/mes</p>
           <ul class="plan-features">
-            <li class="plan-feature"><span class="plan-check">✓</span> 30 días de prueba gratis</li>
+            <li class="plan-feature"><span class="plan-check">✓</span> 15 días de prueba gratis</li>
             <li class="plan-feature"><span class="plan-check">✓</span> Agendamiento 24/7 por WhatsApp</li>
             <li class="plan-feature"><span class="plan-check">✓</span> Google Calendar sincronizado</li>
+            <li class="plan-feature"><span class="plan-check">✓</span> Recordatorios automáticos</li>
+            <li class="plan-feature"><span class="plan-check">✓</span> Panel web de gestión</li>
             <li class="plan-feature"><span class="plan-check">✓</span> Configuración incluida</li>
-            <li class="plan-feature"><span class="plan-check">✓</span> Soporte en español</li>
           </ul>
           <a href="../contacto.html" class="btn btn-outline">Comenzar gratis</a>
         </div>
@@ -164,34 +196,55 @@
           <div class="plan-popular-badge">⭐ Popular</div>
           <p class="plan-name">Pro</p>
           <div class="plan-price">
-            <span class="amount">$99.900</span>
+            <span class="amount">$129.900</span>
             <span class="period">COP/mes</span>
           </div>
-          <p class="plan-desc">Hasta 5 profesionales</p>
+          <p class="plan-desc">6 profesionales · 700 citas/mes</p>
           <ul class="plan-features">
-            <li class="plan-feature"><span class="plan-check">✓</span> 30 días de prueba gratis</li>
+            <li class="plan-feature"><span class="plan-check">✓</span> 15 días de prueba gratis</li>
             <li class="plan-feature"><span class="plan-check">✓</span> Agendamiento 24/7 por WhatsApp</li>
             <li class="plan-feature"><span class="plan-check">✓</span> Google Calendar sincronizado</li>
+            <li class="plan-feature"><span class="plan-check">✓</span> Recordatorios automáticos</li>
+            <li class="plan-feature"><span class="plan-check">✓</span> Panel web de gestión</li>
             <li class="plan-feature"><span class="plan-check">✓</span> Configuración incluida</li>
-            <li class="plan-feature"><span class="plan-check">✓</span> Soporte en español</li>
           </ul>
           <a href="../contacto.html" class="btn btn-primary">Comenzar gratis</a>
+        </div>
+
+        <!-- Advance -->
+        <div class="plan-card">
+          <p class="plan-name">Advance</p>
+          <div class="plan-price">
+            <span class="amount">$199.900</span>
+            <span class="period">COP/mes</span>
+          </div>
+          <p class="plan-desc">9 profesionales · 1.100 citas/mes</p>
+          <ul class="plan-features">
+            <li class="plan-feature"><span class="plan-check">✓</span> 15 días de prueba gratis</li>
+            <li class="plan-feature"><span class="plan-check">✓</span> Agendamiento 24/7 por WhatsApp</li>
+            <li class="plan-feature"><span class="plan-check">✓</span> Google Calendar sincronizado</li>
+            <li class="plan-feature"><span class="plan-check">✓</span> Recordatorios automáticos</li>
+            <li class="plan-feature"><span class="plan-check">✓</span> Panel web de gestión</li>
+            <li class="plan-feature"><span class="plan-check">✓</span> Configuración incluida</li>
+          </ul>
+          <a href="../contacto.html" class="btn btn-outline">Comenzar gratis</a>
         </div>
 
         <!-- Business -->
         <div class="plan-card">
           <p class="plan-name">Business</p>
           <div class="plan-price">
-            <span class="amount">$249.900</span>
+            <span class="amount">$299.900</span>
             <span class="period">COP/mes</span>
           </div>
-          <p class="plan-desc">Hasta 10 profesionales + extras</p>
+          <p class="plan-desc">15 profesionales · 1.500 citas/mes</p>
           <ul class="plan-features">
-            <li class="plan-feature"><span class="plan-check">✓</span> 30 días de prueba gratis</li>
+            <li class="plan-feature"><span class="plan-check">✓</span> 15 días de prueba gratis</li>
             <li class="plan-feature"><span class="plan-check">✓</span> Agendamiento 24/7 por WhatsApp</li>
             <li class="plan-feature"><span class="plan-check">✓</span> Google Calendar sincronizado</li>
+            <li class="plan-feature"><span class="plan-check">✓</span> Recordatorios automáticos</li>
+            <li class="plan-feature"><span class="plan-check">✓</span> Panel web de gestión</li>
             <li class="plan-feature"><span class="plan-check">✓</span> Configuración incluida</li>
-            <li class="plan-feature"><span class="plan-check">✓</span> Soporte en español</li>
             <li class="plan-feature"><span class="plan-check">✓</span> Profesionales adicionales disponibles</li>
           </ul>
           <a href="../contacto.html" class="btn btn-outline">Comenzar gratis</a>
@@ -240,7 +293,7 @@
           </button>
           <div class="faq-answer">
             <div class="faq-answer-inner">
-              El plan Business permite agregar profesionales adicionales por $35.000 COP/mes cada uno. Contáctanos y te ayudamos a configurar tu equipo.
+              El plan Business cubre hasta 15 profesionales. Si necesitas más, puedes agregar profesionales adicionales por $32.000 COP/mes cada uno (+120 citas/mes por profesional). Contáctanos y lo configuramos juntos.
             </div>
           </div>
         </div>
@@ -252,7 +305,19 @@
           </button>
           <div class="faq-answer">
             <div class="faq-answer-inner">
-              Nosotros lo configuramos todo en el onboarding inicial. Después, cada profesional puede ajustar su disponibilidad directamente desde WhatsApp, de forma sencilla.
+              Nosotros configuramos todo en el onboarding inicial: horarios, servicios y disponibilidad. Después puedes ajustar los horarios desde el panel web cuando lo necesites, sin depender de nosotros.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            ¿Qué pasa si supero el límite de citas del plan?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              Las citas adicionales se cobran según tu plan (entre $90 y $200 COP por cita extra). El servicio no se interrumpe. Si ves que superas el límite con frecuencia, te recomendaremos el plan más adecuado.
             </div>
           </div>
         </div>
@@ -291,7 +356,7 @@
     <div class="container">
       <div class="cta-banner fade-up">
         <h2>Empieza a recibir citas hoy</h2>
-        <p>30 días gratis. Sin tarjeta de crédito. Cancelación en cualquier momento.</p>
+        <p>15 días gratis. Sin tarjeta de crédito. Cancelación en cualquier momento.</p>
         <a href="../contacto.html" class="btn btn-primary btn-lg">Comenzar prueba gratis</a>
       </div>
     </div>
@@ -305,7 +370,7 @@
     <div class="footer-grid">
       <div class="footer-col">
         <a href="../index.html" class="footer-logo">Marandev</a>
-        <p>Soluciones de software para negocios latinoamericanos.</p>
+        <p>Transformamos ideas en soluciones digitales.</p>
         <p class="footer-copy">© 2025 Marandev. Todos los derechos reservados.</p>
       </div>
       <div class="footer-col">

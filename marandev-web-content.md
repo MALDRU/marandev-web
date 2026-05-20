@@ -75,7 +75,7 @@ Móvil: hamburger menu
 ```
 Columna 1:
   Logo Marandev
-  "Soluciones de software para negocios latinoamericanos."
+  "Transformamos ideas en soluciones digitales."
   © 2025 Marandev. Todos los derechos reservados.
 
 Columna 2 — Empresa:
