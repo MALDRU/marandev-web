@@ -57,10 +57,10 @@
                 placeholder="Tu nombre">
             </div>
             <div>
-              <label for="f-company" style="display:block;font-size:0.78rem;font-weight:600;color:var(--muted);letter-spacing:0.04em;text-transform:uppercase;margin-bottom:0.4rem">Empresa *</label>
-              <input id="f-company" type="text" required
+              <label for="f-company" style="display:block;font-size:0.78rem;font-weight:600;color:var(--muted);letter-spacing:0.04em;text-transform:uppercase;margin-bottom:0.4rem">Empresa o marca <span style="font-weight:400;text-transform:none">(opcional)</span></label>
+              <input id="f-company" type="text"
                 style="width:100%;background:var(--surface-2);border:1px solid rgba(126,200,69,0.2);border-radius:var(--r);color:var(--text);padding:0.65rem 0.875rem;font-size:0.9rem;outline:none;font-family:inherit;box-sizing:border-box"
-                placeholder="Nombre de tu negocio">
+                placeholder="Nombre de tu negocio o marca">
             </div>
           </div>
           <div>
@@ -70,10 +70,18 @@
               placeholder="tu@empresa.com">
           </div>
           <div>
-            <label for="f-phone" style="display:block;font-size:0.78rem;font-weight:600;color:var(--muted);letter-spacing:0.04em;text-transform:uppercase;margin-bottom:0.4rem">Teléfono <span style="font-weight:400;text-transform:none">(opcional)</span></label>
-            <input id="f-phone" type="tel" autocomplete="tel"
-              style="width:100%;background:var(--surface-2);border:1px solid rgba(126,200,69,0.2);border-radius:var(--r);color:var(--text);padding:0.65rem 0.875rem;font-size:0.9rem;outline:none;font-family:inherit;box-sizing:border-box"
-              placeholder="+57 300 000 0000">
+            <label style="display:block;font-size:0.78rem;font-weight:600;color:var(--muted);letter-spacing:0.04em;text-transform:uppercase;margin-bottom:0.4rem">Teléfono *</label>
+            <div style="display:flex;gap:0.5rem">
+              <select id="f-phone-prefix" required
+                style="background:var(--surface-2);border:1px solid rgba(126,200,69,0.2);border-radius:var(--r);color:var(--text);padding:0.65rem 0.75rem;font-size:0.9rem;outline:none;font-family:inherit;flex-shrink:0">
+                <option value="57">COL +57</option>
+                <option value="593">ECU +593</option>
+                <option value="52">MEX +52</option>
+              </select>
+              <input id="f-phone-number" type="tel" required autocomplete="tel"
+                style="flex:1;background:var(--surface-2);border:1px solid rgba(126,200,69,0.2);border-radius:var(--r);color:var(--text);padding:0.65rem 0.875rem;font-size:0.9rem;outline:none;font-family:inherit;box-sizing:border-box"
+                placeholder="300 000 0000">
+            </div>
           </div>
           <div>
             <label for="f-message" style="display:block;font-size:0.78rem;font-weight:600;color:var(--muted);letter-spacing:0.04em;text-transform:uppercase;margin-bottom:0.4rem">¿Cómo podemos ayudarte? <span style="font-weight:400;text-transform:none">(opcional)</span></label>
@@ -107,7 +115,16 @@
   </section>
 
 <script>
-  document.querySelectorAll('#demo-form input, #demo-form textarea').forEach(function(el) {
+  // Pre-fill message based on referrer page
+  (function() {
+    var from = new URLSearchParams(location.search).get('from');
+    if (from === 'agendachat') {
+      document.getElementById('f-message').value = 'Hola, me interesa AgendaChat para automatizar las citas de mi negocio. Me gustaría solicitar una demo y conocer los planes disponibles.';
+    }
+  })();
+
+  // Focus styles for all inputs, selects and textareas in the form
+  document.querySelectorAll('#demo-form input, #demo-form select, #demo-form textarea').forEach(function(el) {
     el.addEventListener('focus', function() {
       this.style.borderColor = 'rgba(126,200,69,0.6)';
       this.style.boxShadow = '0 0 0 2px rgba(126,200,69,0.12)';
@@ -127,11 +144,14 @@
     btn.textContent = 'Enviando...';
     errEl.style.display = 'none';
 
+    var prefix = document.getElementById('f-phone-prefix').value;
+    var number = document.getElementById('f-phone-number').value.trim();
+
     var body = {
       name:    document.getElementById('f-name').value.trim(),
       company: document.getElementById('f-company').value.trim(),
       email:   document.getElementById('f-email').value.trim(),
-      phone:   document.getElementById('f-phone').value.trim(),
+      phone:   prefix + number,
       message: document.getElementById('f-message').value.trim(),
     };
 
