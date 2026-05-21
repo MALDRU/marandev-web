@@ -11,6 +11,8 @@
   const navMenu   = document.querySelector('.navbar-menu');
 
   if (hamburger && navMenu) {
+    document.body.appendChild(navMenu);
+
     function closeMenu() {
       navMenu.classList.remove('open');
       hamburger.classList.remove('open');
@@ -36,7 +38,7 @@
     });
 
     document.addEventListener('click', function (e) {
-      if (!e.target.closest('.navbar') && navMenu.classList.contains('open')) {
+      if (!e.target.closest('.navbar') && !e.target.closest('.navbar-menu') && navMenu.classList.contains('open')) {
         closeMenu();
       }
     });
