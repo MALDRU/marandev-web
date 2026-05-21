@@ -93,7 +93,7 @@
           <div id="form-error" style="display:none;padding:0.75rem 1rem;background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.25);border-radius:var(--r);font-size:0.875rem;color:#f87171"></div>
 
           <button type="submit" id="f-submit" class="btn btn-primary btn-lg" style="justify-content:center;gap:0.5rem">
-            Solicitar demo
+            Enviar mensaje
           </button>
         </form>
 
@@ -115,11 +115,16 @@
   </section>
 
 <script>
-  // Pre-fill message based on referrer page
+  // Pre-fill message based on referrer page and selected plan
   (function() {
-    var from = new URLSearchParams(location.search).get('from');
+    var params = new URLSearchParams(location.search);
+    var from = params.get('from');
+    var plan = params.get('plan');
     if (from === 'agendachat') {
-      document.getElementById('f-message').value = 'Hola, me interesa AgendaChat para automatizar las citas de mi negocio. Me gustaría solicitar una demo y conocer los planes disponibles.';
+      var msg = plan
+        ? 'Hola, me interesa el plan ' + plan + ' de AgendaChat. Me gustaría conocer más detalles y comenzar mi período de prueba.'
+        : 'Hola, me interesa AgendaChat para automatizar las citas de mi negocio. Me gustaría conocer los planes disponibles.';
+      document.getElementById('f-message').value = msg;
     }
   })();
 
@@ -171,7 +176,7 @@
       errEl.textContent = err.message;
       errEl.style.display = 'block';
       btn.disabled = false;
-      btn.textContent = 'Solicitar demo';
+      btn.textContent = 'Enviar mensaje';
     }
   });
 </script>
