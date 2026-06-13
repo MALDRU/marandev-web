@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0f1d3d">
+<title>Reservar cita</title>
+<style>
+  :root{
+    --bg:#0f1d3d;      /* azul noche  */
+    --card:#16264f;
+    --ink:#eaf0ff;
+    --muted:#94a7d4;
+    --accent:#ffd24a;  /* amarillo señal, único acento */
+    --accent-ink:#1a1400;
+    --line:#26396b;
+    --ok:#2fd27a;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    font:16px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    background:var(--bg);color:var(--ink);
+    min-height:100dvh;
+    padding:env(safe-area-inset-top) 18px env(safe-area-inset-bottom);
+    display:flex;flex-direction:column;
+  }
+  header{padding:26px 0 18px}
+  .eyebrow{
+    font-size:12px;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--accent);font-weight:600;margin-bottom:8px
+  }
+  h1{font-size:25px;line-height:1.15;font-weight:700;letter-spacing:-.01em}
+  .biz{color:var(--muted);font-size:14px;margin-top:6px}
+
+  .step{font-size:13px;color:var(--muted);margin:22px 0 10px;font-weight:600}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
+
+  .slot{
+    appearance:none;border:1px solid var(--line);background:var(--card);
+    color:var(--ink);border-radius:13px;padding:14px 6px;font:inherit;
+    font-weight:600;cursor:pointer;transition:transform .08s,border-color .12s;
+    -webkit-tap-highlight-color:transparent;
+  }
+  .slot:active{transform:scale(.96)}
+  .slot[aria-pressed="true"]{
+    background:var(--accent);color:var(--accent-ink);border-color:var(--accent)
+  }
+  .slot:disabled{opacity:.32;text-decoration:line-through;cursor:not-allowed}
+  .slot:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+  .spacer{flex:1;min-height:18px}
+
+  .cta{
+    appearance:none;width:100%;border:0;border-radius:14px;
+    background:var(--accent);color:var(--accent-ink);
+    font:inherit;font-weight:700;font-size:17px;padding:17px;
+    margin:14px 0 6px;cursor:pointer;transition:opacity .12s,transform .08s;
+  }
+  .cta:active{transform:scale(.99)}
+  .cta:disabled{opacity:.4;cursor:not-allowed}
+
+  .done{
+    text-align:center;padding:40px 10px;display:none
+  }
+  .done.show{display:block}
+  .check{
+    width:64px;height:64px;border-radius:50%;background:var(--ok);
+    display:grid;place-items:center;margin:0 auto 18px;
+    color:#06301c;font-size:34px;font-weight:700
+  }
+  .done h2{font-size:22px;margin-bottom:8px}
+  .done p{color:var(--muted);font-size:15px}
+  .flow.hide{display:none}
+</style>
+</head>
+<body>
+
+  <div class="flow" id="flow">
+    <header>
+      <div class="eyebrow">Reserva en línea</div>
+      <h1>Agenda tu cita</h1>
+      <div class="biz">Barbería El Roble · Chinácota</div>
+    </header>
+
+    <div class="step">1 · Elige el día</div>
+    <div class="grid" id="days"></div>
+
+    <div class="step">2 · Elige la hora</div>
+    <div class="grid" id="hours"></div>
+
+    <div class="spacer"></div>
+
+    <button class="cta" id="confirm" disabled>Selecciona un horario</button>
+  </div>
+
+  <div class="done" id="done">
+    <div class="check">✓</div>
+    <h2>¡Cita confirmada!</h2>
+    <p id="summary"></p>
+  </div>
+
+<script>
+(function(){
+  var days=["Hoy","Mañana","Mié 18","Jue 19","Vie 20","Sáb 21"];
+  var hours=["09:00","10:00","11:00","12:00","15:00","16:00","17:00","18:00"];
+  var busy={ "10:00":1, "15:00":1 }; // simula ocupados
+  var pickDay=null, pickHour=null;
+
+  var $days=document.getElementById("days");
+  var $hours=document.getElementById("hours");
+  var $btn=document.getElementById("confirm");
+
+  function render(list,el,kind,disabledMap){
+    var html="";
+    for(var i=0;i<list.length;i++){
+      var v=list[i];
+      var dis=disabledMap&&disabledMap[v]?" disabled":"";
+      html+='<button class="slot" data-k="'+kind+'" data-v="'+v+'" aria-pressed="false"'+dis+'>'+v+'</button>';
+    }
+    el.innerHTML=html;
+  }
+  render(days,$days,"day");
+  render(hours,$hours,"hour",busy);
+
+  function update(){
+    var ready=pickDay&&pickHour;
+    $btn.disabled=!ready;
+    $btn.textContent=ready?"Confirmar cita":"Selecciona un horario";
+  }
+
+  document.addEventListener("click",function(e){
+    var b=e.target.closest(".slot");
+    if(!b||b.disabled)return;
+    var k=b.dataset.k;
+    var group=k==="day"?$days:$hours;
+    group.querySelectorAll(".slot").forEach(function(x){x.setAttribute("aria-pressed","false");});
+    b.setAttribute("aria-pressed","true");
+    if(k==="day")pickDay=b.dataset.v; else pickHour=b.dataset.v;
+    update();
+  });
+
+  $btn.addEventListener("click",function(){
+    if($btn.disabled)return;
+    document.getElementById("flow").classList.add("hide");
+    var d=document.getElementById("done");
+    d.classList.add("show");
+    document.getElementById("summary").textContent=pickDay+" · "+pickHour+" · Te enviaremos un recordatorio por WhatsApp.";
+    window.scrollTo(0,0);
+  });
+})();
+</script>
+</body>
+</html>
