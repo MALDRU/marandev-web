@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="200 130 624 780" width="624" height="780" role="img" aria-label="Marandev">
+  <defs>
+    <linearGradient id="m" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#00cfff"/><stop offset="1" stop-color="#0a84ff"/></linearGradient>
+    <linearGradient id="s" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff8a1f"/><stop offset="1" stop-color="#f25410"/></linearGradient>
+  </defs>
+  <g fill="none" stroke-width="24" stroke-linejoin="miter" stroke-linecap="butt">
+    <g stroke="url(#s)">
+      <path d="M251 275 L328 318 C360 255 415 205 480 192"/>
+      <path d="M552 192 C625 205 680 255 705 318 L771 275 V655 Q771 685 750 702 L538 868 Q522 880 506 868 L274 702 Q251 685 251 655 Z"/>
+      <path d="M522 148 V325"/>
+      <path d="M404 385 H455 M570 385 H625 M522 440 V500"/>
+      <circle cx="514" cy="385" r="105"/>
+    </g>
+    <path stroke="url(#m)" d="M315 378 L512 570 L710 378 V650 L640 712 V525 L512 655 L385 525 V712 L315 650 Z"/>
+    <g stroke="url(#m)" stroke-width="18">
+      <path d="M470 706 L436 730 L470 754 M552 706 L586 730 L552 754 M503 692 L490 782"/>
+    </g>
+  </g>
+</svg>
