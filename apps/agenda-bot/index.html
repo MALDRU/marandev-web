@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agenda Bot | Agenda de citas con reserva online y Telegram | Marandev</title>
+  <meta name="description" content="Agenda Bot es una plataforma SaaS de agendamiento de citas: reserva online sin registro, bot de Telegram, recordatorios, horarios y festivos. Un producto de Marandev.">
+  <link rel="canonical" href="https://marandev.co/apps/agenda-bot/">
+  <link rel="alternate" hreflang="es" href="https://marandev.co/apps/agenda-bot/">
+  <link rel="alternate" hreflang="en" href="https://marandev.co/en/apps/agenda-bot/">
+  <link rel="alternate" hreflang="x-default" href="https://marandev.co/apps/agenda-bot/">
+  <meta name="theme-color" content="#050d1f">
+  <meta name="color-scheme" content="dark light">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Marandev">
+  <meta property="og:title" content="Agenda Bot | Agenda de citas con reserva online y Telegram">
+  <meta property="og:description" content="Plataforma SaaS de agendamiento de citas con reserva online sin registro, bot de Telegram y recordatorios. Un producto de Marandev.">
+  <meta property="og:url" content="https://marandev.co/apps/agenda-bot/">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:image" content="https://marandev.co/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Agenda Bot, un producto de Marandev">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Agenda Bot | Agenda de citas con reserva online y Telegram">
+  <meta name="twitter:description" content="Plataforma SaaS de agendamiento de citas con reserva online sin registro, bot de Telegram y recordatorios.">
+  <meta name="twitter:image" content="https://marandev.co/assets/img/og-image.png">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+  <script>(function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('marandev-theme');if(t==='light'||t==='dark'){d.setAttribute('data-theme',t);return;}}catch(e){}d.setAttribute('data-theme',window.matchMedia&&window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark');})();</script>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "Agenda Bot", "applicationCategory": "BusinessApplication", "operatingSystem": "Web", "inLanguage": "es", "url": "https://marandev.co/apps/agenda-bot/", "image": "https://marandev.co/assets/img/agenda-bot/icon-512.png", "description": "Plataforma SaaS de agendamiento de citas con reserva online sin registro, bot de Telegram, recordatorios, horarios y festivos.", "publisher": {"@type": "Organization", "name": "Marandev", "url": "https://marandev.co/"}}</script>
+  <script src="/assets/js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="container header-bar">
+      <a class="brand" href="/" aria-label="Marandev, inicio">
+        <img src="/assets/img/logo.svg" width="30" height="38" alt="">
+        <span>Marandev</span>
+      </a>
+      <nav class="nav" id="site-nav" aria-label="Principal">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#funciones">Funciones</a></li>
+          <li><a class="nav__link" href="#capturas">Capturas</a></li>
+          <li><a class="nav__link" href="#privacidad">Privacidad</a></li>
+          <li><a class="nav__link" href="#terminos">Condiciones</a></li>
+        </ul>
+        <a class="btn btn--accent btn--sm" href="mailto:hola@marandev.co?subject=Quiero%20una%20demo%20de%20Agenda%20Bot">Solicitar demo</a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-switch" role="group" aria-label="Idioma"><a href="/apps/agenda-bot/" lang="es" hreflang="es" aria-current="true" aria-label="Español">ES</a><a href="/en/apps/agenda-bot/" lang="en" hreflang="en" aria-label="English">EN</a></div>
+        <button class="icon-btn theme-toggle" type="button" aria-label="Cambiar tema claro/oscuro">
+          <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z"/></svg>
+          <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
+        <button class="icon-btn menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Abrir menú">
+          <svg class="i-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          <svg class="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container product-hero__grid">
+        <div>
+          <img class="product-hero__icon" src="/assets/img/agenda-bot/icon-512.png" width="88" height="88" alt="Logo de Agenda Bot">
+          <span class="eyebrow">Producto SaaS · Marandev</span>
+          <h1 class="hero__title" id="hero-title">Agenda Bot: tu agenda de citas, <span class="grad-text">llena sola.</span></h1>
+          <p class="hero__lead">Tus clientes reservan desde el celular, sin registrarse y sin llamadas, por un enlace o por Telegram. Tú ves todo en una agenda clara, sin dobles reservas.</p>
+          <div class="hero__ctas">
+            <a class="btn btn--accent btn--lg" href="mailto:hola@marandev.co?subject=Quiero%20una%20demo%20de%20Agenda%20Bot">Solicitar una demo</a>
+            <a class="btn btn--ghost btn--lg" href="#capturas">Ver la app</a>
+          </div>
+        </div>
+        <div class="shot-pair">
+          <figure class="shot"><img src="/assets/img/agenda-bot/reserva-1.webp" width="780" height="1520" alt="Reserva pública en el celular: paso 1, elegir el servicio" fetchpriority="high"></figure>
+          <figure class="shot"><img src="/assets/img/agenda-bot/reserva-2.webp" width="780" height="1520" alt="Reserva pública en el celular: paso 2, calendario con los días que tienen horas" fetchpriority="high"></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="problema" aria-labelledby="problema-title">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">El problema</span>
+          <h2 class="section__title" id="problema-title">Agendar por chat y llamadas no escala</h2>
+          <p class="section__lead">Consultorios, salones, talleres y consultores pierden horas respondiendo mensajes, cruzando horarios y atendiendo inasistencias. Agenda Bot automatiza ese ciclo de punta a punta: el cliente elige, el negocio confirma y todos reciben su recordatorio.</p>
+        </div>
+        <ul class="facts">
+          <li class="reveal" style="--d:0ms"><strong>Sin sobrecupos</strong><span>Dos citas del mismo profesional nunca se cruzan: la disponibilidad se valida en el mismo momento en que se guarda la cita.</span></li>
+          <li class="reveal" style="--d:80ms"><strong>Sin fricción para el cliente</strong><span>Reserva en 5 pasos desde el celular, sin crear cuenta. Puede consultar o cancelar su cita con un código.</span></li>
+          <li class="reveal" style="--d:160ms"><strong>Cada negocio, su espacio</strong><span>Multiempresa: cada negocio tiene su enlace público, su logo, su horario, su equipo y sus datos aislados.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="funciones" aria-labelledby="funciones-title">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">Funciones</span>
+          <h2 class="section__title" id="funciones-title">Todo lo que necesita un negocio de citas</h2>
+        </div>
+        <ul class="cards">
+        <li class="card reveal" style="--d:0ms">
+          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></div>
+          <h3>Reserva online sin registro</h3>
+          <p>Página pública mobile-first e instalable como app (PWA), con el nombre y el logo de cada negocio. El cliente elige servicio, profesional, día y hora.</p>
+        </li>
+        <li class="card reveal" style="--d:60ms">
+          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 4 3 11l6 2.5L11.5 20 14 14l7-10z"/><path d="m9 13.5 5-4.5"/></svg></div>
+          <h3>Bot de Telegram</h3>
+          <p>Cada negocio conecta su propio bot (de forma automática o con el token de BotFather) para que sus clientes agenden, consulten y cancelen desde el chat.</p>
+        </li>
+        <li class="card reveal" style="--d:120ms">
+          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 17V11a6 6 0 1 1 12 0v6l1.5 2h-15z"/><path d="M10 21h4"/></svg></div>
+          <h3>Avisos y recordatorios</h3>
+          <p>Avisos al cliente cuando su cita se confirma, se rechaza o se cancela, y un recordatorio automático unas horas antes de la cita.</p>
+        </li>
+        <li class="card reveal" style="--d:180ms">
+          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+          <h3>Horarios, cierres y festivos</h3>
+          <p>Horario semanal por empresa y por profesional, cierres y bloqueos puntuales, y festivos por país calculados automáticamente. Una vista previa muestra qué verá el cliente.</p>
+        </li>
+        <li class="card reveal" style="--d:240ms">
+          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.5a3.5 3.5 0 0 1 0 7M18 14.5a6 6 0 0 1 3.5 5.5"/></svg></div>
+          <h3>Servicios, recursos y clientes</h3>
+          <p>Catálogo de servicios con su duración, profesionales o recursos con tope diario y tiempo de espera, confirmación manual o automática, y ficha de clientes con historial.</p>
+        </li>
+        <li class="card reveal" style="--d:300ms">
+          <div class="card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.2 7.8 8 9 4.8-1.2 8-4.5 8-9V6z"/><path d="m9 12 2 2 4-4"/></svg></div>
+          <h3>Planes y vigencia</h3>
+          <p>Catálogo de planes con vigencia por empresa, renovaciones mensuales con historial de pagos y avisos de vencimiento para quien administra la plataforma.</p>
+        </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="capturas" aria-labelledby="capturas-title">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">La app</span>
+          <h2 class="section__title" id="capturas-title">Una agenda simple, por dentro y por fuera</h2>
+          <p class="section__lead">Capturas reales de un entorno de pruebas de Agenda Bot.</p>
+        </div>
+        <div class="shots">
+          <figure class="shot reveal">
+            <img src="/assets/img/agenda-bot/horario.webp" width="1040" height="740" loading="lazy" alt="Editor del horario de atención semanal de la empresa, con franjas por día y pestañas de cierres y vista previa">
+            <figcaption>Horario de atención: franjas por día, cierres, bloqueos y vista previa de lo que verá el cliente.</figcaption>
+          </figure>
+          <figure class="shot reveal">
+            <img src="/assets/img/agenda-bot/telegram.webp" width="552" height="690" loading="lazy" alt="Integración de Telegram activa con recordatorios antes de la cita">
+            <figcaption>Integración con Telegram: bot propio de cada negocio y recordatorios antes de la cita.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="tecnologia" aria-labelledby="tecnologia-title">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">Por dentro</span>
+          <h2 class="section__title" id="tecnologia-title">Construido para operar en serio</h2>
+          <p class="section__lead">Diseñado, desarrollado y desplegado de extremo a extremo por Marandev.</p>
+        </div>
+        <ul class="tags reveal">
+          <li class="tag">API en Go</li>
+          <li class="tag">PostgreSQL</li>
+          <li class="tag">SvelteKit (SPA / PWA)</li>
+          <li class="tag">Nginx + Ansible</li>
+          <li class="tag">Bot API de Telegram</li>
+          <li class="tag">Multiempresa y roles</li>
+        </ul>
+        <ul class="facts">
+          <li class="reveal" style="--d:0ms"><strong>Datos protegidos</strong><span>Secretos de integraciones cifrados en reposo, sesiones con renovación de token, límite de peticiones y bloqueo de abusos en el servidor.</span></li>
+          <li class="reveal" style="--d:80ms"><strong>Reglas probadas</strong><span>Disponibilidad, festivos, zonas horarias y vigencia de planes viven en módulos de lógica pura con pruebas automáticas.</span></li>
+          <li class="reveal" style="--d:160ms"><strong>Infraestructura como código</strong><span>El servidor completo se aprovisiona y se despliega de forma repetible, con versiones visibles en la app.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section--alt legal-section" id="privacidad" aria-labelledby="privacidad-title">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">Legal</span>
+          <h2 class="section__title" id="privacidad-title">Política de privacidad y tratamiento de datos</h2>
+        </div>
+        <div class="legal">
+          <p class="legal__meta">Agenda Bot · Versión 1.0 · Última actualización: 4 de octubre de 2026</p>
+          <nav class="legal__toc" aria-label="Contenido de la política de privacidad">
+            <ol>
+              <li><a href="#p1">Quiénes somos y qué cubre esta política</a></li>
+              <li><a href="#p2">Roles: responsable y encargado</a></li>
+              <li><a href="#p3">Datos que tratamos</a></li>
+              <li><a href="#p4">Para qué usamos los datos</a></li>
+              <li><a href="#p5">Telegram y otros terceros</a></li>
+              <li><a href="#p6">Cookies y almacenamiento del navegador</a></li>
+              <li><a href="#p7">Conservación y eliminación</a></li>
+              <li><a href="#p8">Seguridad</a></li>
+              <li><a href="#p9">Tus derechos</a></li>
+              <li><a href="#p10">Menores de edad</a></li>
+              <li><a href="#p11">Cambios y contacto</a></li>
+            </ol>
+          </nav>
+
+          <h3 id="p1">1. Quiénes somos y qué cubre esta política</h3>
+          <p>Agenda Bot es una plataforma de agendamiento de citas operada por <strong>Marandev</strong> (Maldru), desarrollador de software con sede en Colombia. Esta política explica cómo se tratan los datos personales en el panel de administración, en la página pública de reservas de cada negocio y en el bot de Telegram. Se rige por la Ley 1581 de 2012, el Decreto 1377 de 2013 (compilado en el Decreto 1074 de 2015) y demás normas colombianas de protección de datos personales.</p>
+
+          <h3 id="p2">2. Roles: responsable y encargado</h3>
+          <p>Agenda Bot lo usan <strong>negocios</strong> (las «empresas») para atender a sus propios clientes. Por eso:</p>
+          <ul>
+            <li><strong>Datos de los clientes finales</strong> (quienes reservan una cita): el responsable es el negocio que los recoge. Marandev actúa como <strong>encargado del tratamiento</strong>: los procesa por cuenta del negocio, solo para prestar el servicio y siguiendo sus instrucciones.</li>
+            <li><strong>Datos de las cuentas de los negocios y de sus usuarios</strong> (administradores): Marandev es el responsable.</li>
+          </ul>
+          <p>Si eres cliente de un negocio y quieres ejercer tus derechos, puedes dirigirte primero al negocio; también puedes escribirnos y gestionaremos tu solicitud.</p>
+
+          <h3 id="p3">3. Datos que tratamos</h3>
+          <ul>
+            <li><strong>De la empresa:</strong> razón social, NIT, teléfono, enlace público, logo, horarios, servicios, recursos o profesionales, plan contratado, vigencia y pagos registrados de la suscripción.</li>
+            <li><strong>De los usuarios del panel:</strong> nombre, usuario y contraseña (almacenada de forma protegida), rol y registros de sesión.</li>
+            <li><strong>De los clientes finales:</strong> nombre, teléfono, notas que ellos o el negocio añadan, y los datos de cada cita (servicio, profesional, fecha y hora, estado e historial de cambios).</li>
+            <li><strong>Si agendan por Telegram:</strong> el identificador de chat de Telegram necesario para responderles y enviarles avisos, y el nombre de usuario o nombre que Telegram comparta con el bot.</li>
+            <li><strong>Datos técnicos:</strong> dirección IP y registros de acceso del servidor, usados para seguridad, prevención de abusos y diagnóstico.</li>
+          </ul>
+          <p>No pedimos datos sensibles. Te recomendamos que tú y tu negocio no escriban datos de salud ni otros datos sensibles en las notas de las citas.</p>
+
+          <h3 id="p4">4. Para qué usamos los datos</h3>
+          <ul>
+            <li>Gestionar la agenda: crear, confirmar, reprogramar y cancelar citas, y evitar cruces de horario.</li>
+            <li>Enviar avisos de la cita y recordatorios por los canales habilitados (por ahora, Telegram).</li>
+            <li>Administrar las cuentas, los planes y la vigencia de cada empresa.</li>
+            <li>Mantener la seguridad, prevenir fraude y abusos, y corregir fallos.</li>
+            <li>Cumplir obligaciones legales.</li>
+          </ul>
+          <p><strong>No vendemos datos personales ni los usamos para publicidad</strong>, y no los compartimos con terceros distintos de los proveedores indicados en esta política.</p>
+
+          <h3 id="p5">5. Telegram y otros terceros</h3>
+          <p>Cuando un negocio activa la integración, los mensajes con su bot pasan por <strong>Telegram</strong>, que trata los datos bajo su propia política de privacidad. Marandev no controla ese tratamiento. Los tokens de los bots se guardan cifrados. La plataforma se aloja en infraestructura de servidores contratada por Marandev; no hay otros proveedores que reciban datos de clientes finales.</p>
+
+          <h3 id="p6">6. Cookies y almacenamiento del navegador</h3>
+          <p>Agenda Bot no usa cookies de publicidad ni de seguimiento. Usa el almacenamiento del navegador para lo estrictamente necesario: mantener la sesión del panel, recordar el tema claro u oscuro, y habilitar la instalación como app (PWA) y su caché de archivos. El sitio marandev.co guarda únicamente tu preferencia de tema.</p>
+
+          <h3 id="p7">7. Conservación y eliminación</h3>
+          <p>Conservamos los datos mientras la cuenta de la empresa exista, para que mantenga su historial de citas. Si una empresa se elimina, sus datos se borran de forma definitiva, incluidos clientes, citas e historial. Un negocio también puede eliminar a un cliente y todas sus citas desde el panel. Los registros técnicos del servidor se conservan solo el tiempo necesario para seguridad y diagnóstico.</p>
+          <p>Cuando el plan de una empresa vence, el acceso y las reservas se suspenden, pero los datos no se borran por ese motivo.</p>
+
+          <h3 id="p8">8. Seguridad</h3>
+          <p>Aplicamos medidas técnicas y organizativas razonables: conexiones cifradas (HTTPS), secretos cifrados en reposo, control de acceso por roles con aislamiento entre empresas, sesiones con caducidad, límites de peticiones, bloqueo automático de abusos y despliegues controlados. Ningún sistema es infalible; si detectamos un incidente que afecte tus datos, actuaremos y te informaremos según la ley.</p>
+
+          <h3 id="p9">9. Tus derechos</h3>
+          <p>Como titular puedes conocer, actualizar y rectificar tus datos, solicitar prueba de la autorización, ser informado del uso que se les da, revocar la autorización o pedir la supresión cuando proceda, presentar quejas ante la Superintendencia de Industria y Comercio (SIC) y acceder gratuitamente a tus datos. Atendemos consultas y reclamos en los plazos legales (10 y 15 días hábiles, respectivamente).</p>
+          <p>Para ejercerlos escribe a <a href="mailto:hola@marandev.co?subject=Datos%20personales%20-%20Agenda%20Bot">hola@marandev.co</a> indicando tu nombre, tu teléfono y el negocio con el que agendaste.</p>
+
+          <h3 id="p10">10. Menores de edad</h3>
+          <p>Agenda Bot no está dirigido a menores de 18 años como usuarios del panel. Si un negocio agenda citas para menores, es el negocio quien debe contar con la autorización de sus representantes legales.</p>
+
+          <h3 id="p11">11. Cambios y contacto</h3>
+          <p>Podemos actualizar esta política; la versión vigente y su fecha siempre estarán en esta página, y avisaremos a las empresas cuando el cambio sea relevante. Contacto: <a href="mailto:hola@marandev.co?subject=Privacidad%20-%20Agenda%20Bot">hola@marandev.co</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section legal-section" id="terminos" aria-labelledby="terminos-title">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">Legal</span>
+          <h2 class="section__title" id="terminos-title">Condiciones del servicio</h2>
+        </div>
+        <div class="legal">
+          <p class="legal__meta">Agenda Bot · Versión 1.0 · Última actualización: 4 de octubre de 2026</p>
+          <nav class="legal__toc" aria-label="Contenido de las condiciones del servicio">
+            <ol>
+              <li><a href="#t1">Aceptación y alcance</a></li>
+              <li><a href="#t2">El servicio</a></li>
+              <li><a href="#t3">Cuentas y accesos</a></li>
+              <li><a href="#t4">Planes, vigencia y pagos</a></li>
+              <li><a href="#t5">Uso aceptable</a></li>
+              <li><a href="#t6">Datos de tus clientes</a></li>
+              <li><a href="#t7">Telegram y servicios de terceros</a></li>
+              <li><a href="#t8">Disponibilidad y soporte</a></li>
+              <li><a href="#t9">Propiedad intelectual</a></li>
+              <li><a href="#t10">Limitación de responsabilidad</a></li>
+              <li><a href="#t11">Suspensión y terminación</a></li>
+              <li><a href="#t12">Cambios, ley aplicable y contacto</a></li>
+            </ol>
+          </nav>
+
+          <h3 id="t1">1. Aceptación y alcance</h3>
+          <p>Estas condiciones regulan el uso de Agenda Bot, plataforma de agendamiento de citas operada por <strong>Marandev</strong> (Maldru). Al crear una cuenta, usar el panel o reservar una cita a través de un negocio que usa la plataforma, aceptas estas condiciones y la <a href="#privacidad">política de privacidad</a>. Si actúas en nombre de una empresa, declaras tener la facultad para obligarla.</p>
+
+          <h3 id="t2">2. El servicio</h3>
+          <p>Agenda Bot permite a un negocio publicar su disponibilidad, recibir reservas por una página pública y por Telegram, administrar su agenda, clientes, servicios, recursos y horarios, y enviar avisos y recordatorios. Es una herramienta de gestión: <strong>la relación y cualquier servicio prestado entre el negocio y su cliente son de ellos</strong>, y Marandev no es parte de esa relación.</p>
+
+          <h3 id="t3">3. Cuentas y accesos</h3>
+          <p>Las cuentas de empresa las crea Marandev o quien este autorice. Eres responsable de la confidencialidad de tus credenciales, de la actividad que ocurra con ellas y de los usuarios que habilites. Avísanos de inmediato si sospechas un acceso no autorizado.</p>
+
+          <h3 id="t4">4. Planes, vigencia y pagos</h3>
+          <ul>
+            <li>Cada empresa tiene un plan con precio en pesos colombianos (COP) y una <strong>vigencia</strong> con fecha de inicio y de fin, o ilimitada si así se pactó.</li>
+            <li>La renovación extiende la vigencia un mes (o lo pactado). Si la renuevas antes del vencimiento, no pierdes los días restantes.</li>
+            <li>Con la vigencia vencida, el panel queda limitado, la página pública de reservas deja de recibir citas y el bot y los recordatorios dejan de enviar mensajes. <strong>Tus datos se conservan</strong> y todo se restablece al renovar.</li>
+            <li>Los precios y condiciones comerciales se acuerdan con Marandev. Salvo que se indique lo contrario, los pagos de periodos ya iniciados no son reembolsables.</li>
+          </ul>
+
+          <h3 id="t5">5. Uso aceptable</h3>
+          <p>No puedes usar Agenda Bot para actividades ilegales o fraudulentas, para enviar spam o mensajes no solicitados, para suplantar a otras personas, para intentar acceder a datos de otras empresas, para vulnerar o sobrecargar la plataforma (incluidos ataques automatizados) ni para almacenar contenido ilícito. Podemos limitar o suspender el uso que ponga en riesgo el servicio o a terceros.</p>
+
+          <h3 id="t6">6. Datos de tus clientes</h3>
+          <p>Eres el responsable de los datos personales de tus clientes: debes informarles su tratamiento, contar con su autorización y atender sus solicitudes, conforme a la ley colombiana. Marandev los trata como encargado, según la <a href="#privacidad">política de privacidad</a>. Los clientes con avisos por Telegram deben haber iniciado el chat con el bot; no debes usar los avisos para fines distintos a sus citas.</p>
+
+          <h3 id="t7">7. Telegram y servicios de terceros</h3>
+          <p>La integración depende de Telegram y está sujeta a sus condiciones y a su disponibilidad. Marandev no es responsable de interrupciones, cambios o restricciones de Telegram, ni de que un mensaje sea entregado o leído.</p>
+
+          <h3 id="t8">8. Disponibilidad y soporte</h3>
+          <p>Trabajamos para que el servicio esté disponible de forma continua, pero se ofrece <strong>«tal cual»</strong>, sin garantía de operación ininterrumpida ni libre de errores. Podemos realizar mantenimientos y actualizaciones, procurando avisar con antelación cuando afecten el uso. El soporte se presta por correo a <a href="mailto:hola@marandev.co">hola@marandev.co</a>.</p>
+
+          <h3 id="t9">9. Propiedad intelectual</h3>
+          <p>El software, el diseño, las marcas y la documentación de Agenda Bot pertenecen a Marandev. Se te otorga un derecho limitado, no exclusivo e intransferible de uso mientras tu plan esté vigente. Conservas la propiedad de tus datos y de tu logo, y nos autorizas a tratarlos y mostrarlos solo para prestarte el servicio.</p>
+
+          <h3 id="t10">10. Limitación de responsabilidad</h3>
+          <p>En la medida permitida por la ley, Marandev no responde por lucro cesante, pérdida de clientes o de citas, daños indirectos ni por hechos de terceros, de fuerza mayor o derivados del mal uso de la plataforma. Cuando exista responsabilidad, se limitará al valor pagado por el servicio en los tres meses anteriores al hecho. Nada de lo anterior limita derechos que la ley no permita limitar.</p>
+
+          <h3 id="t11">11. Suspensión y terminación</h3>
+          <p>Puedes dejar de usar el servicio en cualquier momento y pedirnos la eliminación de tu empresa y sus datos. Podemos suspender o terminar una cuenta por incumplimiento de estas condiciones, falta de pago o riesgo para la plataforma, avisando cuando sea razonable. Al terminar, los datos se tratan según lo previsto en la política de privacidad.</p>
+
+          <h3 id="t12">12. Cambios, ley aplicable y contacto</h3>
+          <p>Podemos modificar estas condiciones; la versión vigente y su fecha estarán siempre en esta página, y los cambios sustanciales se informarán a las empresas. Seguir usando el servicio después del cambio implica su aceptación. Estas condiciones se rigen por las leyes de la República de Colombia y las controversias se someterán a los jueces competentes de Colombia. Contacto: <a href="mailto:hola@marandev.co?subject=Condiciones%20-%20Agenda%20Bot">hola@marandev.co</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="contacto" aria-labelledby="contacto-title">
+      <div class="container">
+        <div class="panel contact reveal">
+          <h2 class="section__title" id="contacto-title">¿Quieres Agenda Bot en tu negocio?</h2>
+          <p class="section__lead">Te mostramos la plataforma funcionando y la configuramos contigo.</p>
+          <a class="btn btn--accent btn--lg" href="mailto:hola@marandev.co?subject=Quiero%20una%20demo%20de%20Agenda%20Bot">Escríbenos a hola@marandev.co</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a class="brand" href="/" aria-label="Marandev, inicio">
+            <img src="/assets/img/logo.svg" width="30" height="38" alt="">
+            <span>Marandev</span>
+          </a>
+          <p>Transformamos ideas en soluciones digitales.</p>
+        </div>
+        <div>
+          <h2 class="footer__title">Agenda Bot</h2>
+          <ul class="footer__links">
+          <li><a href="#funciones">Funciones</a></li>
+          <li><a href="#privacidad">Política de privacidad</a></li>
+          <li><a href="#terminos">Condiciones del servicio</a></li>
+          <li><a href="/#proyectos">Todos los proyectos</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer__title">Contacto</h2>
+          <ul class="footer__links">
+            <li><a href="mailto:hola@marandev.co">hola@marandev.co</a></li>
+          </ul>
+          <h2 class="footer__title" style="margin-top:1.5rem">Idioma</h2>
+          <div class="lang-switch" role="group" aria-label="Idioma"><a href="/apps/agenda-bot/" lang="es" hreflang="es" aria-current="true" aria-label="Español">ES</a><a href="/en/apps/agenda-bot/" lang="en" hreflang="en" aria-label="English">EN</a></div>
+        </div>
+      </div>
+      <p class="footer__bottom">© 2026 Marandev. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -2,7 +2,7 @@
    Marandev — estilos
    1. Tokens  2. Base  3. Layout  4. Header/nav  5. Botones  6. Hero
    7. Secciones  8. Tarjetas  9. Proceso  10. Proyectos/Contacto
-   11. Footer  12. Animaciones  13. Responsive
+   11. Footer  12. Animaciones  13. Responsive  14. Proyecto / página de producto  15. Legal
    ========================================================================== */
 
 /* 1. Tokens ---------------------------------------------------------------- */
@@ -342,4 +342,54 @@ a:hover { text-decoration-thickness: 2px; }
   .header-actions { gap: 4px; }
   .lang-switch a { min-width: 34px; }
   .header-bar { gap: var(--space-2); }
+}
+
+/* 14. Proyecto / página de producto ---------------------------------------- */
+.project {
+  display: grid; gap: var(--space-6); align-items: center; padding: clamp(1.25rem, 1rem + 2vw, 2.5rem);
+  border: 1px solid var(--border); border-radius: calc(var(--radius) + 6px); background: linear-gradient(160deg, var(--surface), var(--surface-2));
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+.project:hover { border-color: transparent; box-shadow: var(--glow); }
+.project__icon { width: 64px; height: 64px; border-radius: 16px; margin-bottom: var(--space-4); }
+.project__title { font-size: var(--fs-h2); margin-bottom: var(--space-3); }
+.project__text { color: var(--text-muted); font-size: var(--fs-lg); margin-bottom: var(--space-5); max-width: 40rem; }
+.project__media { border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); background: var(--bg); }
+.project__media img { width: 100%; height: auto; display: block; }
+.tags { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-bottom: var(--space-5); }
+.tag { padding: 4px 12px; border: 1px solid var(--border); border-radius: 999px; font-size: var(--fs-sm); color: var(--text-muted); background: var(--surface); }
+.product-hero__icon { width: 88px; height: 88px; border-radius: 22px; margin-bottom: var(--space-5); box-shadow: var(--shadow); }
+.product-hero__grid { display: grid; gap: var(--space-7); align-items: center; position: relative; }
+.shots { display: grid; gap: var(--space-5); align-items: start; }
+.shot { margin: 0; }
+.shot img { width: 100%; height: auto; display: block; border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); background: var(--surface); }
+.shot figcaption { margin-top: var(--space-3); color: var(--text-muted); font-size: var(--fs-sm); }
+.shot--phone { max-width: 20rem; margin-inline: auto; }
+.shot-pair { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); }
+.facts { display: grid; gap: var(--space-4); }
+.facts li { padding: var(--space-5); border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
+.facts strong { display: block; font-size: var(--fs-h3); margin-bottom: var(--space-2); }
+.facts span { color: var(--text-muted); }
+.nav__link[aria-current="page"] { color: var(--text); background: var(--surface-2); }
+
+/* 15. Legal ---------------------------------------------------------------- */
+.legal { max-width: 52rem; }
+.legal__meta { color: var(--text-muted); font-size: var(--fs-sm); margin-bottom: var(--space-5); }
+.legal__toc { margin-bottom: var(--space-6); padding: var(--space-4) var(--space-5); border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
+.legal__toc ol { columns: 2 16rem; column-gap: var(--space-6); padding-left: 1.2rem; list-style: decimal; }
+.legal__toc a { display: inline-block; padding-block: 4px; }
+.legal h3 { font-size: var(--fs-h3); margin: var(--space-6) 0 var(--space-3); scroll-margin-top: calc(var(--header-h) + 1rem); }
+.legal p, .legal li { color: var(--text-muted); }
+.legal p { margin-bottom: var(--space-3); }
+.legal ul { list-style: disc; padding-left: 1.3rem; margin-bottom: var(--space-3); display: grid; gap: var(--space-2); }
+.legal strong { color: var(--text); }
+.legal a { color: var(--primary); }
+.legal__note { margin-top: var(--space-6); padding: var(--space-4) var(--space-5); border-left: 3px solid var(--accent); background: var(--surface); border-radius: var(--radius-sm); color: var(--text-muted); font-size: var(--fs-sm); }
+.legal-section { scroll-margin-top: var(--header-h); }
+@media (min-width: 860px) {
+  .project { grid-template-columns: 1fr 1fr; }
+  .product-hero__grid { grid-template-columns: 1.05fr 0.95fr; }
+  .shots { grid-template-columns: 1fr 1fr; }
+  .shots .shot--wide { grid-column: 1 / -1; }
+  .facts { grid-template-columns: repeat(3, 1fr); }
 }

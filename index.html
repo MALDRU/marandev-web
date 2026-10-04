@@ -47,6 +47,7 @@
         <ul class="nav__list">
           <li><a class="nav__link" href="#servicios">Servicios</a></li>
           <li><a class="nav__link" href="#proceso">Proceso</a></li>
+          <li><a class="nav__link" href="#proyectos">Proyectos</a></li>
           <li><a class="nav__link" href="#nosotros">Nosotros</a></li>
           <li><a class="nav__link" href="#contacto">Contacto</a></li>
         </ul>
@@ -205,12 +206,22 @@
 
     <section class="section section--alt" id="proyectos" aria-labelledby="proyectos-title">
       <div class="container">
-        <div class="panel reveal">
+        <div class="section__head reveal">
           <span class="eyebrow">Proyectos</span>
-          <h2 class="section__title" id="proyectos-title">Estamos preparando nuestro portafolio.</h2>
-          <p class="section__lead">Mientras tanto, hablemos de tu proyecto.</p>
-          <a class="btn btn--accent" href="#contacto">Hablemos de tu proyecto</a>
+          <h2 class="section__title" id="proyectos-title">Productos que hemos construido</h2>
         </div>
+        <article class="project reveal">
+          <div>
+            <img class="project__icon" src="/assets/img/agenda-bot/icon-512.png" width="64" height="64" alt="" loading="lazy">
+            <h3 class="project__title">Agenda Bot</h3>
+            <p class="project__text">Plataforma SaaS de agendamiento de citas: reserva online sin registro, bot de Telegram, recordatorios y agenda sin dobles reservas para cualquier negocio que atienda con cita.</p>
+            <ul class="tags">
+              <li class="tag">Producto SaaS</li><li class="tag">Go</li><li class="tag">SvelteKit</li><li class="tag">PostgreSQL</li><li class="tag">Telegram</li>
+            </ul>
+            <a class="btn btn--accent" href="/apps/agenda-bot/">Ver Agenda Bot</a>
+          </div>
+          <a class="project__media" href="/apps/agenda-bot/" tabindex="-1" aria-hidden="true"><img src="/assets/img/agenda-bot/horario.webp" width="1040" height="740" alt="" loading="lazy"></a>
+        </article>
       </div>
     </section>
 
@@ -239,6 +250,7 @@
           <ul class="footer__links">
           <li><a href="#servicios">Servicios</a></li>
           <li><a href="#proceso">Proceso</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
           <li><a href="#nosotros">Nosotros</a></li>
           <li><a href="#contacto">Contacto</a></li>
           </ul>
